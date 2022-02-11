@@ -130,7 +130,7 @@ div {
   text-decoration: none;
 }
 
-.span {
+.span-logo {
   display: inline-block;
 
   color: var(--primery-text-color);
@@ -274,7 +274,7 @@ fill: #2196F3;
   letter-spacing: 0.06em;
 }
 
-.hero-button {
+.button {
   min-width: 100px;
   display: block;
   margin: 0 auto;
@@ -296,8 +296,8 @@ fill: #2196F3;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.button:hover,
+.button:focus {
   color: var(--auxiliary-text-color);
 }
 
@@ -729,7 +729,6 @@ transform: translateY(0);
 .network {
  width: 206px;
 margin-left: 70px;
-
 }
 
 .network-subtitle {
@@ -739,10 +738,9 @@ margin-left: 70px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
 
-   margin-bottom: 20px;
+  margin-bottom: 20px;
  
   text-align: left;
 
@@ -750,22 +748,72 @@ margin-left: 70px;
 
 .footer-linknetwork {
   background-color: rgba(255, 255, 255, 0.1);
- 
+
 }
 
 .footer-icon {
- fill: #ffffff;
+  fill: #ffffff;
 }
+
+/* form footer */
+
+.form-footer {
+  margin-left: 93px;
+}
+.form-footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+}
+
+.form-footer-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-input {
+  display: block;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 0 15px 16px;
+  background-color: transparent;
+  margin-right: 12px;
+  color: #ffffff;
+}
+.telegram-svg {
+  display: block;
+  fill: #FFFFFF;
+  margin-left: 10px;
+  /* margin-top: 3px; */
+  
+}
+
+
+.form-btn {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
   
 /* backdrop */
 
 .backdrop {
- width: 100vw;
- height: 100vh;
- background-color: rgba(0, 0, 0, 0.2);
- position: fixed;
- top: 0;
- transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms;
 }
 
 .is-hidden .modal {
@@ -778,7 +826,7 @@ margin-left: 70px;
   width: 528px;
   height: 581px;
   background-color: #ffffff;
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: absolute;
   top: 50%;
@@ -808,6 +856,7 @@ margin-left: 70px;
 
 .modal-button-icon {
   fill: #000000;
+  margin: 0 auto;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -829,35 +878,202 @@ margin-left: 70px;
   visibility: hidden;
 }
 
-.backdrop {
-}
-.is-hidden {
-}
-.modal {
-}
-.button-icon {
-}
-.modal-button-icon {
+/* form */
+
+.form-titl {
+  padding: 40px 40px 30px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
 }
 
-is-hidden
-
-.backdrop {
+.form-div {
+  width: 448px;
+  margin: 0 auto;
+  
 }
-.is-hidden {
-}
-.modal {
-}
-.button-icon {
-}
-.modal-button-icon {
-}
-.backdrop 
 
-.is-hidden 
+.label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--auxiliary-text-color);
 
-.modal 
+}
+.input-div {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
 
-.button-icon 
+.textarea::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
 
-.modal-button-icon 
+  color: rgba(117, 117, 117, 0.5);
+
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border-color: #2196f3;
+ 
+}
+
+.modal-input:hover + .form-svg {
+  fill: #2196f3;
+}
+.modal-input:focus + .form-svg {
+  fill: #2196f3;
+}
+  
+
+.form-svg {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  fill: #212121;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 15px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .form-svg:hover   {
+  fill: #2196f3;
+  
+ }
+ .form-svg:hover  .modal-input {
+    border-color: #2196f3;
+ }
+
+ .textarea {
+  height: 100%;
+  padding-left: 16px;
+  
+ }
+
+ .checkbox-form-btn {
+   
+  display: block;
+  padding: 10px 56px;
+  margin: 0 auto;
+ }
+
+ /* checkbox  form*/
+
+ .checkbox {
+  margin-top: 20px; 
+  margin-bottom: 30px;
+ 
+ }
+
+ .checkbox-label,
+ .checkbox-link {
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer; 
+  
+}
+
+/* .checkbox-label {
+  display: flex;
+  align-items: center;
+} */
+
+
+
+ /* власний checkbox спосіб №1 */
+
+/* .checkbox-label::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  
+  margin-right: 7px;
+  cursor: pointer;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+.checkbox-input:checked + .checkbox-label::before  {
+ 
+  background-image: url(../images/icon-check.svg);
+  border: none;
+} */
+
+ .checkbox-link {
+  color: var(--hover-color);
+ 
+ } 
+
+ /* власний checkbox спосіб №2 використовуємо іконку зі спрайту */
+ 
+ .checkbox-label span {
+  
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: baound-collor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.checkbox-on-svg {
+  fill: transparent;
+  transition: baound-collor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked + .checkbox-label > span {
+  background-color: var(--hover-color);
+  border: none;
+}
+
+.checkbox-input:checked + .checkbox-label svg {
+ fill: #FFFFFF;
+  
+}
+ 
+
+/* скриваємо стандартний checkbox */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+

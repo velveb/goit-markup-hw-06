@@ -791,7 +791,6 @@ margin-left: 70px;
   display: block;
   fill: #FFFFFF;
   margin-left: 10px;
-  /* margin-top: 3px; */
   
 }
 
@@ -825,6 +824,7 @@ margin-left: 70px;
 .modal {
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -881,30 +881,31 @@ margin-left: 70px;
 /* form */
 
 .form-titl {
-  padding: 40px 40px 30px;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  margin-bottom: 12px;
 }
 
-.form-div {
-  width: 448px;
-  margin: 0 auto;
-  
-}
+
 
 .label {
+  display: block;
+  
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--auxiliary-text-color);
-
+  margin-bottom: 10px;
 }
 .input-div {
+  display: block;
   position: relative;
-  margin-top: 4px;
-  margin-bottom: 10px;
+}
+
+.label coment {
+ margin-bottom: 30px;
 }
 
 .textarea::placeholder {
@@ -922,6 +923,7 @@ margin-left: 70px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  margin-top: 4px;
   padding-left: 42px;
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -942,8 +944,7 @@ margin-left: 70px;
   
 
 .form-svg {
-  width: 18px;
-  height: 18px;
+  
   display: inline-block;
   fill: #212121;
   position: absolute;
@@ -962,9 +963,9 @@ margin-left: 70px;
  }
 
  .textarea {
-  height: 100%;
+  height: 120px;
   padding-left: 16px;
-  
+  resize: none;
  }
 
  .checkbox-form-btn {
@@ -977,10 +978,8 @@ margin-left: 70px;
  /* checkbox  form*/
 
  .checkbox {
-  margin-top: 20px; 
   margin-bottom: 30px;
- 
- }
+  }
 
  .checkbox-label,
  .checkbox-link {
@@ -1045,19 +1044,33 @@ margin-left: 70px;
 
 .checkbox-on-svg {
   fill: transparent;
-  transition: baound-collor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.checkbox-input:checked + .checkbox-label > span {
+  background-color: var(--hover-color);
+  border: none;
+ 
+}
+
+.checkbox-input:focus + .checkbox-label > span  {
+  border-color: var(--hover-color);
 }
 
 .checkbox-input:checked + .checkbox-label > span {
   background-color: var(--hover-color);
   border: none;
+ 
 }
 
+
+
 .checkbox-input:checked + .checkbox-label svg {
- fill: #FFFFFF;
-  
+fill: #FFFFFF;
 }
- 
+
+
 
 /* скриваємо стандартний checkbox */
 
